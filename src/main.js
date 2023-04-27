@@ -9,7 +9,7 @@ const main = async () => {
   console.log("process.env.API_KEY:", process.env.API_KEY);
   const gpt = new GptModel(process.env.API_KEY, process.env.PROXY);
 
-  const result = await gpt.sendMessage(Template);
+  const result = await gpt.sendMessage(Template.welcome.robot);
 
   console.log(chalk.bgRed(result.text));
 };

@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import { ChatGPTAPI } from "chatgpt";
 import HttpsProxyAgent from "https-proxy-agent";
 
@@ -33,6 +34,7 @@ export default class GptModel {
 
   async sendMessage(msg) {
     try {
+      console.log(chalk.bgGreenBright(msg));
       const result = await this.chatGpt.sendMessage(msg);
 
       return result;
